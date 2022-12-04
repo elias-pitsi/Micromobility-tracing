@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Microbility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj": {}
+    "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj": {}
   },
   "projects": {
-    "D:\\Microbility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj": {
+    "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microbility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj",
+        "projectUniqueName": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj",
         "projectName": "MicromobilityApp.Android",
-        "projectPath": "D:\\Microbility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj",
+        "projectPath": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-        "outputPath": "D:\\Microbility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\obj\\",
+        "outputPath": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid13.0": {
             "projectReferences": {
-              "D:\\Microbility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj": {
-                "projectPath": "D:\\Microbility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj"
+              "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj": {
+                "projectPath": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj"
               }
             }
           }
@@ -54,14 +54,14 @@
         }
       }
     },
-    "D:\\Microbility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj": {
+    "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microbility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj",
+        "projectUniqueName": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj",
         "projectName": "MicromobilityApp",
-        "projectPath": "D:\\Microbility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj",
+        "projectPath": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-        "outputPath": "D:\\Microbility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\obj\\",
+        "outputPath": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -116,6 +116,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[3.1.0-beta2, )"
             },
             "ZXing.Net.Mobile.Forms": {
               "target": "Package",
