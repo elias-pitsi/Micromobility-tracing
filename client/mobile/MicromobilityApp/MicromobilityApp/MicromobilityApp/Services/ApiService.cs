@@ -1,14 +1,4 @@
 ﻿
-
-#pragma warning disable 108 // Disable "CS0108 '{derivedDto}.ToJson()' hides inherited member '{dtoBase}.ToJson()'. Use the new keyword if hiding was intended."
-#pragma warning disable 114 // Disable "CS0114 '{derivedDto}.RaisePropertyChanged(String)' hides inherited member 'dtoBase.RaisePropertyChanged(String)'. To make the current member override that implementation, add the override keyword. Otherwise add the new keyword."
-#pragma warning disable 472 // Disable "CS0472 The result of the expression is always 'false' since a value of type 'Int32' is never equal to 'null' of type 'Int32?'
-#pragma warning disable 1573 // Disable "CS1573 Parameter '...' has no matching param tag in the XML comment for ...
-#pragma warning disable 1591 // Disable "CS1591 Missing XML comment for publicly visible type or member ..."
-#pragma warning disable 8073 // Disable "CS8073 The result of the expression is always 'false' since a value of type 'T' is never equal to 'null' of type 'T?'"
-#pragma warning disable 3016 // Disable "CS3016 Arrays as attribute arguments is not CLS-compliant"
-#pragma warning disable 8603 // Disable "CS8603 Possible null reference return"
-
 namespace MyNamespace
 {
     using System.Net.Http;
@@ -17,7 +7,7 @@ namespace MyNamespace
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.17.0.0 (NJsonSchema v10.8.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Client
     {
-        private string _baseUrl = "https://tracingapi.azurewebsites.net";
+        private string _baseUrl = "https://tracing20221206124519.azurewebsites.net/";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
 
@@ -50,15 +40,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<RegistrationRequest> ApiAuthenticationRegisterAsync(OwnerRegistrationDto body)
+        public virtual System.Threading.Tasks.Task<RegistrationRequest> RegisterAsync(OwnerRegistrationDto body)
         {
-            return ApiAuthenticationRegisterAsync(body, System.Threading.CancellationToken.None);
+            return RegisterAsync(body, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<RegistrationRequest> ApiAuthenticationRegisterAsync(OwnerRegistrationDto body, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<RegistrationRequest> RegisterAsync(OwnerRegistrationDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Authentication/register");
@@ -128,15 +118,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<LoginResponse> ApiAuthenticationLoginAsync(OwnerLoginDto body)
+        public virtual System.Threading.Tasks.Task<LoginResponse> LoginAsync(OwnerLoginDto body)
         {
-            return ApiAuthenticationLoginAsync(body, System.Threading.CancellationToken.None);
+            return LoginAsync(body, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<LoginResponse> ApiAuthenticationLoginAsync(OwnerLoginDto body, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<LoginResponse> LoginAsync(OwnerLoginDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Authentication/login");
@@ -178,10 +168,12 @@ namespace MyNamespace
                         if (status_ == 200)
                         {
                             var objectResponse_ = await ReadObjectResponseAsync<LoginResponse>(response_, headers_, cancellationToken).ConfigureAwait(false);
+                            /*
                             if (objectResponse_.Object == null)
                             {
                                 throw new ApiException("Response was null which was not expected.", status_, objectResponse_.Text, headers_, null);
-                            }
+                            } 
+                            */
                             return objectResponse_.Object;
                         }
                         else
@@ -206,15 +198,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<OwnerRegistrationDto> ApiAuthenticationVerifyAsync(string token)
+        public virtual System.Threading.Tasks.Task<OwnerRegistrationDto> VerifyAsync(string token)
         {
-            return ApiAuthenticationVerifyAsync(token, System.Threading.CancellationToken.None);
+            return VerifyAsync(token, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<OwnerRegistrationDto> ApiAuthenticationVerifyAsync(string token, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<OwnerRegistrationDto> VerifyAsync(string token, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Authentication/verify?");
@@ -286,15 +278,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<OwnerRegistrationDto> ApiAuthenticationForgotpasswordAsync(string email)
+        public virtual System.Threading.Tasks.Task<OwnerRegistrationDto> ForgotpasswordAsync(string email)
         {
-            return ApiAuthenticationForgotpasswordAsync(email, System.Threading.CancellationToken.None);
+            return ForgotpasswordAsync(email, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<OwnerRegistrationDto> ApiAuthenticationForgotpasswordAsync(string email, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<OwnerRegistrationDto> ForgotpasswordAsync(string email, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Authentication/forgotpassword?");
@@ -366,15 +358,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<ResetPasswordRequest> ApiAuthenticationResetpasswordAsync(ResetPasswordRequest body)
+        public virtual System.Threading.Tasks.Task<ResetPasswordRequest> ResetpasswordAsync(ResetPasswordRequest body)
         {
-            return ApiAuthenticationResetpasswordAsync(body, System.Threading.CancellationToken.None);
+            return ResetpasswordAsync(body, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<ResetPasswordRequest> ApiAuthenticationResetpasswordAsync(ResetPasswordRequest body, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<ResetPasswordRequest> ResetpasswordAsync(ResetPasswordRequest body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Authentication/resetpassword");
@@ -444,15 +436,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task ApiAuthenticationAsync(EmailDto body)
+        public virtual System.Threading.Tasks.Task AuthenticationAsync(EmailDto body)
         {
-            return ApiAuthenticationAsync(body, System.Threading.CancellationToken.None);
+            return AuthenticationAsync(body, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task ApiAuthenticationAsync(EmailDto body, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task AuthenticationAsync(EmailDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Authentication");
@@ -516,15 +508,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<System.Collections.Generic.ICollection<Bike>> ApiBikeGetAsync()
+        public virtual System.Threading.Tasks.Task<System.Collections.Generic.ICollection<Bike>> BikeAllAsync()
         {
-            return ApiBikeGetAsync(System.Threading.CancellationToken.None);
+            return BikeAllAsync(System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<System.Collections.Generic.ICollection<Bike>> ApiBikeGetAsync(System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<System.Collections.Generic.ICollection<Bike>> BikeAllAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Bike");
@@ -590,15 +582,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<BikeResponse> ApiBikePostAsync(BikeDto body)
+        public virtual System.Threading.Tasks.Task<BikeResponse> BikeAsync(BikeDto body)
         {
-            return ApiBikePostAsync(body, System.Threading.CancellationToken.None);
+            return BikeAsync(body, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<BikeResponse> ApiBikePostAsync(BikeDto body, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<BikeResponse> BikeAsync(BikeDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Bike");
@@ -668,15 +660,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<ComponentsDto> ApiComponentsGetAsync()
+        public virtual System.Threading.Tasks.Task<ComponentsDto> ComponentsGETAsync()
         {
-            return ApiComponentsGetAsync(System.Threading.CancellationToken.None);
+            return ComponentsGETAsync(System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<ComponentsDto> ApiComponentsGetAsync(System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<ComponentsDto> ComponentsGETAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Components");
@@ -742,15 +734,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<ComponentsDto> ApiComponentsPostAsync(AddComponentsDto body)
+        public virtual System.Threading.Tasks.Task<ComponentsDto> ComponentsPOSTAsync(AddComponentsDto body)
         {
-            return ApiComponentsPostAsync(body, System.Threading.CancellationToken.None);
+            return ComponentsPOSTAsync(body, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<ComponentsDto> ApiComponentsPostAsync(AddComponentsDto body, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<ComponentsDto> ComponentsPOSTAsync(AddComponentsDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/Components");
@@ -820,15 +812,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<ComponentsHistory> ApiComponentsGetAsync(System.Guid id)
+        public virtual System.Threading.Tasks.Task<ComponentsHistory> ComponentsGET2Async(System.Guid id)
         {
-            return ApiComponentsGetAsync(id, System.Threading.CancellationToken.None);
+            return ComponentsGET2Async(id, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<ComponentsHistory> ApiComponentsGetAsync(System.Guid id, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<ComponentsHistory> ComponentsGET2Async(System.Guid id, System.Threading.CancellationToken cancellationToken)
         {
             if (id == null)
                 throw new System.ArgumentNullException("id");
@@ -898,15 +890,15 @@ namespace MyNamespace
 
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<ComponentsDto> ApiComponentsPutAsync(System.Guid id, AddComponentsDto body)
+        public virtual System.Threading.Tasks.Task<ComponentsDto> ComponentsPUTAsync(System.Guid id, AddComponentsDto body)
         {
-            return ApiComponentsPutAsync(id, body, System.Threading.CancellationToken.None);
+            return ComponentsPUTAsync(id, body, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<ComponentsDto> ApiComponentsPutAsync(System.Guid id, AddComponentsDto body, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<ComponentsDto> ComponentsPUTAsync(System.Guid id, AddComponentsDto body, System.Threading.CancellationToken cancellationToken)
         {
             if (id == null)
                 throw new System.ArgumentNullException("id");

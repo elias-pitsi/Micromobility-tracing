@@ -9,6 +9,13 @@
             <StackLayout HorizontalOptions="Center">
                 <Label Text="Components Registration" FontSize="34" Margin="0,50, 0,0" HorizontalTextAlignment="Center"/>
                 <Label Text="Add components details to register" FontSize="20" HorizontalTextAlignment="Center"/>
+                <Button Text="AutoRegister"  
+                        WidthRequest="280" 
+                        HeightRequest="55" 
+                        CornerRadius="440" 
+                        BackgroundColor="#FF8033" 
+                        HorizontalOptions="Center" 
+                        Clicked="ScanClicked"/>
 
                 <Frame CornerRadius="30" 
                        Margin="0, 15, 0, 0"

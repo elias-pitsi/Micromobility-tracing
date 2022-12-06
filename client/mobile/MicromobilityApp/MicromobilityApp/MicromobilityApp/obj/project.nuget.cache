@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "r1WqMYKHAPfVPR6uzS5uti5zvf/fzlz+LLcmQxbFnUxPT4Qy1OPbtqe3ESkijPyAVo7+VqVfK1Mgd3yWz8BaTw==",
+  "dgSpecHash": "w/P0YmoOddDeiiO7ROY5GZQcZgXQRKT8+yLrWgfcBJfP6qBEyvGf9lqEP+acFKsoPMuemjLwRVuluOsJrD8AAQ==",
   "success": true,
   "projectFilePath": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,7 @@
     "C:\\Users\\elias\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\zxing.net\\0.16.6\\zxing.net.0.16.6.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\zxing.net.mobile\\3.1.0-beta2\\zxing.net.mobile.3.1.0-beta2.nupkg.sha512",
-    "C:\\Users\\elias\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+    "C:\\Users\\elias\\.nuget\\packages\\zxing.net.mobile.forms\\3.1.0-beta2\\zxing.net.mobile.forms.3.1.0-beta2.nupkg.sha512"
   ],
   "logs": []
 }

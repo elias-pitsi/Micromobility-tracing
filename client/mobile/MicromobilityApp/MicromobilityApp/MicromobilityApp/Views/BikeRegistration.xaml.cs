@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZXing.Net.Mobile.Forms;
 
 namespace MicromobilityApp.Views
 {
@@ -54,7 +55,7 @@ namespace MicromobilityApp.Views
 				Components = componentsCollection,
 			};
 
-			var getBikeRegistration = await client.ApiBikePostAsync(bikeResult);
+			var getBikeRegistration = await client.BikeAsync(bikeResult);
 
 			if (getBikeRegistration.BikeResponse1 != "Something when wrong") 
 			{

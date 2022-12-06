@@ -24,14 +24,23 @@ namespace MicromobilityApp.Views
 				Password = Password.Text
 			};
 
-			var getLogin = await client.ApiAuthenticationLoginAsync(owner);
+			var getLogin = await client.LoginAsync(owner);
 			
 			if(getLogin.Token != "Wrong Credentials! Please check your username or password")
 			{
                 App.Current.Properties["IsLogged"] = getLogin;
                 await Navigation.PushAsync(new MenuPage());
 
-            }
+            } 
+			else
+			{
+				LoginError.Text = "Something went wrong try again!"; 
+			}
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+			await Navigation.PushAsync(new Register());
         }
     }
 }

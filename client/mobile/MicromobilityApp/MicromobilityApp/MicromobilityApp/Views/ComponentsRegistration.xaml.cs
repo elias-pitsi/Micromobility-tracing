@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZXing.Net.Mobile.Forms;
 
 namespace MicromobilityApp.Views
 {
@@ -44,7 +45,7 @@ namespace MicromobilityApp.Views
                 };
 
 
-                var comRes = client.ApiComponentsPostAsync(ComponentsReg);
+                var comRes = client.ComponentsPOSTAsync(ComponentsReg);
 
                 if (comRes != null) 
                 {
@@ -52,6 +53,24 @@ namespace MicromobilityApp.Views
                 }
             }
            
+        }
+
+        private async void ScanClicked(object sender, EventArgs e)
+        {
+            var scan = new ZXingScannerPage();
+            await Navigation.PushModalAsync(scan);
+
+            scan.OnScanResult += (result) =>
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await Navigation.PopModalAsync();
+                    await DisplayAlert("Tracing QRCODE", "", result.Text, "Ok");
+                });
+            };
+
+           // var text = scan.Result.Text.ToArray(); 
+            //var textArray = text.Split('\n');
         }
     }
 }

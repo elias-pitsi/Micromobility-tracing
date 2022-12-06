@@ -4,6 +4,7 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "MicromobilityApp.Android.dll" comes first in this list. */
 		"MicromobilityApp.Android.dll",
 		"CommunityToolkit.Mvvm.dll",
+		"FastAndroidCamera.dll",
 		"FormsViewGroup.dll",
 		"MicromobilityApp.dll",
 		"Newtonsoft.Json.dll",
@@ -66,6 +67,9 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Xaml.dll",
 		"Xamarin.Google.Android.Material.dll",
 		"Xamarin.Google.Guava.ListenableFuture.dll",
+		"zxing.dll",
+		"ZXing.Net.Mobile.Forms.dll",
+		"ZXingNetMobile.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

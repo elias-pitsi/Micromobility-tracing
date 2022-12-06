@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Microbility-tracing\\server\\Tracing\\Tracing\\Tracing.csproj": {}
+    "D:\\dotnet\\Micromobility-tracing\\server\\Tracing\\Tracing\\Tracing.csproj": {}
   },
   "projects": {
-    "D:\\Microbility-tracing\\server\\Tracing\\Tracing\\Tracing.csproj": {
+    "D:\\dotnet\\Micromobility-tracing\\server\\Tracing\\Tracing\\Tracing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microbility-tracing\\server\\Tracing\\Tracing\\Tracing.csproj",
+        "projectUniqueName": "D:\\dotnet\\Micromobility-tracing\\server\\Tracing\\Tracing\\Tracing.csproj",
         "projectName": "Tracing",
-        "projectPath": "D:\\Microbility-tracing\\server\\Tracing\\Tracing\\Tracing.csproj",
+        "projectPath": "D:\\dotnet\\Micromobility-tracing\\server\\Tracing\\Tracing\\Tracing.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-        "outputPath": "D:\\Microbility-tracing\\server\\Tracing\\Tracing\\obj\\",
+        "outputPath": "D:\\dotnet\\Micromobility-tracing\\server\\Tracing\\Tracing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -34,6 +34,7 @@
                            Placeholder="Password"
                            Margin="0, -30, 0, -30"/>
                 </Frame>
+                <Label x:Name="LoginError" TextColor="Red" />
 
                 <Button Text="Login"
                         WidthRequest="280" 
@@ -43,8 +44,9 @@
                         HorizontalOptions="Center" 
                         Margin="0,15, 0, 0"
                         Clicked="HandleLogin"/>
+                
                 <Button Text="Forgot your password?" Background="white"/>
-                <Button Text="Sign Up new account" Background="white"/>
+                <Button Text="Sign Up new account" Background="white" Clicked="Button_Clicked"/>
             </StackLayout>
         </Grid>
     </ScrollView>

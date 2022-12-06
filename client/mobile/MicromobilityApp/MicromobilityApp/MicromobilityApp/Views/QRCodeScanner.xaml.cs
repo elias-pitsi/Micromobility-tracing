@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -20,7 +16,7 @@ namespace MicromobilityApp.Views
 
 		private async void ScanClicked(object sender, EventArgs e)
 		{
-			var scan = new ZXingScannerPage(); // Instakk the package
+			var scan = new ZXingScannerPage(); 
 			await Navigation.PushModalAsync(scan);
 
 			scan.OnScanResult += (result) =>
@@ -28,7 +24,7 @@ namespace MicromobilityApp.Views
 				Device.BeginInvokeOnMainThread(async () =>
 				{
 					await Navigation.PopModalAsync();
-					await DisplayAlert("Valeur QRCODE", "", result.Text, "Ok");
+					await DisplayAlert("Tracing QRCODE", "", result.Text, "Ok");
 				});
 			}; 
 		}
