@@ -22,7 +22,9 @@
           "Newtonsoft.Json": "13.0.1",
           "Swashbuckle.AspNetCore": "6.2.3",
           "Swashbuckle.AspNetCore.Filters": "7.0.5",
-          "System.IdentityModel.Tokens.Jwt": "6.21.0"
+          "System.IdentityModel.Tokens.Jwt": "6.21.0",
+          "ZXing.Net.Mobile": "3.1.0-beta2",
+          "ZXing.Net.Mobile.Forms": "3.1.0-beta2"
         },
         "runtime": {
           "Tracing.dll": {}
@@ -1631,6 +1633,67 @@
           "System.Threading": "4.0.11",
           "System.Xml.ReaderWriter": "4.0.11"
         }
+      },
+      "Xamarin.Essentials/1.6.0": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms/5.0.0.1874": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.582"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.582"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.582"
+          }
+        }
+      },
+      "ZXing.Net/0.16.6": {
+        "runtime": {
+          "lib/netcoreapp3.1/zxing.dll": {
+            "assemblyVersion": "0.16.6.0",
+            "fileVersion": "0.16.6.0"
+          }
+        }
+      },
+      "ZXing.Net.Mobile/3.1.0-beta2": {
+        "dependencies": {
+          "Xamarin.Essentials": "1.6.0",
+          "ZXing.Net": "0.16.6"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ZXingNetMobile.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
+      "ZXing.Net.Mobile.Forms/3.1.0-beta2": {
+        "dependencies": {
+          "Xamarin.Essentials": "1.6.0",
+          "Xamarin.Forms": "5.0.0.1874",
+          "ZXing.Net": "0.16.6",
+          "ZXing.Net.Mobile": "3.1.0-beta2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ZXing.Net.Mobile.Forms.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
       }
     }
   },
@@ -2710,6 +2773,41 @@
       "sha512": "sha512-Mk2mKmPi0nWaoiYeotq1dgeNK1fqWh61+EK+w4Wu8SWuTYLzpUnschb59bJtGywaPq7SmTuPf44wrXRwbIrukg==",
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-geJYnjTyPv2npClIkBxLXk9cOV9CPwj/oayA8I4+6NpZc/dIiYxax36m25SW8TrCMR/rvyY44fZBjWBvj7BCQQ==",
+      "path": "xamarin.essentials/1.6.0",
+      "hashPath": "xamarin.essentials.1.6.0.nupkg.sha512"
+    },
+    "Xamarin.Forms/5.0.0.1874": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DddatpRCi4WvM4pBuDfRtKr/KkhFZoVE1KLNFwbOfltVUecqf78y8VaIDDU/iddfNfMSSzoqDBWpZgNj6lFyxA==",
+      "path": "xamarin.forms/5.0.0.1874",
+      "hashPath": "xamarin.forms.5.0.0.1874.nupkg.sha512"
+    },
+    "ZXing.Net/0.16.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0+6EcJ7Ve1BocwqvqpAmgMa7xF3wxqROcM3KvAE6WGNIqXLA5YEziLjRX+kKYVrcttlFRz1IaoRSzt/o6Ttviw==",
+      "path": "zxing.net/0.16.6",
+      "hashPath": "zxing.net.0.16.6.nupkg.sha512"
+    },
+    "ZXing.Net.Mobile/3.1.0-beta2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d9iLRTaNG7u5Zc/JjYJ7zSNi3Sdtpn9r34D5qdWeWNckbuW8wHLrXGCQ0XE/PTeFU9lbMOrvxIKjipG/AgW4+A==",
+      "path": "zxing.net.mobile/3.1.0-beta2",
+      "hashPath": "zxing.net.mobile.3.1.0-beta2.nupkg.sha512"
+    },
+    "ZXing.Net.Mobile.Forms/3.1.0-beta2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q+V7bLM1L8CXXkN+RtN4dY6/nNl8+5SPpbdO/6NUzt9bOzrBijDXSkSobNGOtxRUT5aD4ylLDmDrCQiMUKFD2A==",
+      "path": "zxing.net.mobile.forms/3.1.0-beta2",
+      "hashPath": "zxing.net.mobile.forms.3.1.0-beta2.nupkg.sha512"
     }
   }
 }

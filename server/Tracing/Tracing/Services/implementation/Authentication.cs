@@ -145,8 +145,10 @@ public class Authentication : IAuthentication
         List<Claim> claims = new()
         {
             new Claim(ClaimTypes.Name, owner.Name),
-            new Claim(JwtRegisteredClaimNames.Sub, owner.email),
+            new Claim(JwtRegisteredClaimNames.Sub, owner.OwnerId.ToString()),
             new Claim(JwtRegisteredClaimNames.Email, owner.email),
+            new Claim(JwtRegisteredClaimNames.Name, owner.Name),
+            new Claim(JwtRegisteredClaimNames.FamilyName, owner.Surname),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             new Claim(JwtRegisteredClaimNames.Iat, DateTime.Now.ToUniversalTime().ToString()),
             new Claim(ClaimTypes.Role, "Admin"),

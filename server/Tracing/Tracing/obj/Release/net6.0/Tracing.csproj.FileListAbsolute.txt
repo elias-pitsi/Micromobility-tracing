@@ -100,3 +100,10 @@ D:\Microbility-tracing\server\Tracing\Tracing\obj\Release\net6.0\staticwebassets
 D:\Microbility-tracing\server\Tracing\Tracing\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.Tracing.props
 D:\Microbility-tracing\server\Tracing\Tracing\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.Tracing.props
 D:\Microbility-tracing\server\Tracing\Tracing\obj\Release\net6.0\staticwebassets.pack.json
+D:\Microbility-tracing\server\Tracing\Tracing\bin\Release\net6.0\Xamarin.Essentials.dll
+D:\Microbility-tracing\server\Tracing\Tracing\bin\Release\net6.0\Xamarin.Forms.Core.dll
+D:\Microbility-tracing\server\Tracing\Tracing\bin\Release\net6.0\Xamarin.Forms.Platform.dll
+D:\Microbility-tracing\server\Tracing\Tracing\bin\Release\net6.0\Xamarin.Forms.Xaml.dll
+D:\Microbility-tracing\server\Tracing\Tracing\bin\Release\net6.0\zxing.dll
+D:\Microbility-tracing\server\Tracing\Tracing\bin\Release\net6.0\ZXingNetMobile.dll
+D:\Microbility-tracing\server\Tracing\Tracing\bin\Release\net6.0\ZXing.Net.Mobile.Forms.dll

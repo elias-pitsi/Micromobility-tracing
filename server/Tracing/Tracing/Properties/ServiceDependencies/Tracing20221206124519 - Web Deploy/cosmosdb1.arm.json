@@ -54,7 +54,7 @@
               "type": "Microsoft.DocumentDB/databaseAccounts",
               "kind": "GlobalDocumentDB",
               "systemData": {
-                "createdAt": "2022-11-07T15:21:48.8198776Z"
+                "createdAt": "2022-12-06T10:34:45.4966082Z"
               },
               "properties": {
                 "databaseAccountOfferType": "Standard"

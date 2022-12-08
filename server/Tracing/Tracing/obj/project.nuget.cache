@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vle+xtSafnlODGtKlDCFS01F1VeQA8t6XKczJElDhdAzhYlZIfrZWw4CnyNdOAYHj+Dt+cLASAGoGLYiCogv1g==",
+  "dgSpecHash": "KFQww4NJ9rbpiOu2wLWLL9MUIPMqbsNhe1wJWoCKN9jnMXO7MrXf+EKj8euu3qg+k5ea4CdNXqv/YQc/Ij2coA==",
   "success": true,
-  "projectFilePath": "D:\\dotnet\\Micromobility-tracing\\server\\Tracing\\Tracing\\Tracing.csproj",
+  "projectFilePath": "D:\\dotnet\\Android\\Micromobility-tracing\\server\\Tracing\\Tracing\\Tracing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
