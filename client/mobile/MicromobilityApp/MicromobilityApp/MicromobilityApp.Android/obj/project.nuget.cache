@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bAlWo9dthI7xn8RE10FHIj+wut4YZMYQ0oBGgWkEImV/975fi2pjXxptNEZXLhJ+H9d2scnZ0zbJ4k8rIem9OQ==",
+  "dgSpecHash": "OOrn01zFlIhpX1BjtCuhi0K78dexHgWHvbEfbVcACeefBbnFCH+iaPpHCtTZkV/DF4QSI6YVXmbxuA4qgtBB1g==",
   "success": true,
-  "projectFilePath": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj",
+  "projectFilePath": "D:\\dotnet\\Android\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0-preview1\\communitytoolkit.mvvm.8.1.0-preview1.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\fastandroidcamera\\2.0.0\\fastandroidcamera.2.0.0.nupkg.sha512",

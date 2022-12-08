@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w/P0YmoOddDeiiO7ROY5GZQcZgXQRKT8+yLrWgfcBJfP6qBEyvGf9lqEP+acFKsoPMuemjLwRVuluOsJrD8AAQ==",
+  "dgSpecHash": "aKL6awV0wk2f9cZHluY6kBsfKLFJh7IDBiGpw4NTjORUJMtYv4r5BDUPi7RAAzmLvz5iwy2YqkfbSwzmSR8JZQ==",
   "success": true,
-  "projectFilePath": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj",
+  "projectFilePath": "D:\\dotnet\\Android\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0-preview1\\communitytoolkit.mvvm.8.1.0-preview1.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

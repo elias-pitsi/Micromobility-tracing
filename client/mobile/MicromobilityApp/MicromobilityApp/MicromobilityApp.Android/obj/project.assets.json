@@ -3860,11 +3860,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj",
+      "projectUniqueName": "D:\\dotnet\\Android\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj",
       "projectName": "MicromobilityApp.Android",
-      "projectPath": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj",
+      "projectPath": "D:\\dotnet\\Android\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\MicromobilityApp.Android.csproj",
       "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-      "outputPath": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\obj\\",
+      "outputPath": "D:\\dotnet\\Android\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3885,8 +3885,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj": {
-              "projectPath": "D:\\dotnet\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj"
+            "D:\\dotnet\\Android\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj": {
+              "projectPath": "D:\\dotnet\\Android\\Micromobility-tracing\\client\\mobile\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp\\MicromobilityApp.csproj"
             }
           }
         }

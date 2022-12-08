@@ -22,11 +22,11 @@ namespace MicromobilityApp.Views
             client = new Client(); 
         }
 
-        private void CompRegister(object sender, EventArgs e)
+        private async void CompRegister(object sender, EventArgs e)
         {
             OwnerDto owner = new OwnerDto()
             {
-                OwnerId = Guid.NewGuid(),
+                OwnerId = Guid.NewGuid(), // need to fetch the owner from the decoded qr code 
                 Name = OwnerName.Text,
                 Surname = email.Text
             };
@@ -34,8 +34,6 @@ namespace MicromobilityApp.Views
 
             if (owner != null)
             {
-                var OwnerID = owner.OwnerId;
-
                 var ComponentsReg = new AddComponentsDto
                 {
                     CompId = Guid.NewGuid(),
@@ -45,7 +43,12 @@ namespace MicromobilityApp.Views
                 };
 
 
-                var comRes = client.ComponentsPOSTAsync(ComponentsReg);
+                var comRes = client.ApiComponentsPostAsync(ComponentsReg);
+
+                if (comRes != null)
+                {
+                    await Navigation.PushAsync(new MenuPage());
+                }
 
                 if (comRes != null) 
                 {
@@ -64,13 +67,16 @@ namespace MicromobilityApp.Views
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
+                    var ScannerResults = result.Text.Split(',');
+                    name.Text = ScannerResults[0];
+                    OwnerName.Text = ScannerResults[1];
+                    surname.Text = ScannerResults[2];
+                    email.Text = ScannerResults[3];
+
+
                     await Navigation.PopModalAsync();
-                    await DisplayAlert("Tracing QRCODE", "", result.Text, "Ok");
                 });
             };
-
-           // var text = scan.Result.Text.ToArray(); 
-            //var textArray = text.Split('\n');
         }
     }
 }
