@@ -7,9 +7,9 @@ namespace Tracing.DataAccess.Models;
 public class Bike
 {
     [JsonProperty(PropertyName = "bikeid")]
-    public Guid BikeId { get; set; } = Guid.NewGuid();
+    public string BikeId { get; set; } = Guid.NewGuid().ToString();
 
-    public Guid OwnerId { get; set; }
+    public string OwnerId { get; set; } = Guid.NewGuid().ToString();
     public List<BikeComponentsDto> Components { get; set; } = new();
 
 
