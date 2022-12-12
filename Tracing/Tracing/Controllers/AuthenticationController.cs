@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Tracing.DataAccess.Dtos;
+using Tracing.DataAccess.Models;
 using Tracing.Services.interfaces;
 
 namespace Tracing.Controllers;
@@ -37,7 +38,10 @@ public class AuthenticationController : ControllerBase
         var response = await _authentication.Login(request);
         var getLogin = new LoginResponse
         {
-            Token = response
+            Token = response.Token, 
+            OwnerId = response.OwnerId,
+            Email = response.Email,
+            returnMessage = "Suceess"
         };
 
         return Ok(getLogin);

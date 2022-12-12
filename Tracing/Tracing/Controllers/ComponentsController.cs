@@ -29,7 +29,7 @@ public class ComponentsController : ControllerBase
     }
 
     [HttpGet("{id:Guid}")]
-    public async Task<ActionResult<ComponentsHistory>> GetComponentHistory(Guid id)
+    public async Task<ActionResult<ComponentsHistory>> GetComponentHistory(string id)
     {
         var comp = await _componentsService.GetComponentHistory(id);
 
@@ -61,7 +61,7 @@ public class ComponentsController : ControllerBase
     }
 
     [HttpPut("{id:guid}")]
-    public async Task<ActionResult<ComponentsDto>> UpdateComponents(Guid id, AddComponentsDto components)
+    public async Task<ActionResult<ComponentsDto>> UpdateComponents(string id, AddComponentsDto components)
     {
         return Ok(await _componentsService.UpdateComponents(id, components));
     }

@@ -49,29 +49,54 @@ public class Authentication : IAuthentication
          return "Owner successfully registered";
     }
 
-    public async Task<string> Login(OwnerLoginDto request)
+    public async Task<LoginResponse> Login(OwnerLoginDto request)
     {
         var email = await _context.Owners.Where(x => x.email == request.email).FirstOrDefaultAsync();
         var passwordHash = await _context.Owners.Select(x => x.PasswordHash).FirstOrDefaultAsync();
         var passwordSalt = await _context.Owners.Select(x => x.PasswordSalt).FirstOrDefaultAsync();
         var owner = await _context.Owners.FirstOrDefaultAsync(u => u.email == request.email);
+
+        var loginError = "Wrong Credentials! Please check your username or password";
         
+
+
         if (email == null)
         {
-            return "Wrong Credentials! Please check your username or password";
+            return new LoginResponse
+            {
+                Token = null,
+                OwnerId = null, 
+                Email = email?.email,
+                returnMessage = loginError,
+            };
         }
 
         if ((passwordHash is not null) && (passwordSalt is not null))
         {
             if (!VerifyPasswordHash(request.password, passwordHash, passwordSalt))
             {
-                return "Wrong Credentials! Please check your username or password";
+                return new LoginResponse
+                {
+                    Token = null,
+                    OwnerId = null,
+                    Email = email?.email,
+                    returnMessage = loginError,
+                };
             }
         }
 
         var token = CreateToken(owner);
 
-        return token;
+        var loginData = new LoginResponse
+        {
+            Token = token, 
+            OwnerId = owner.OwnerId, 
+            Email = email.email,
+            returnMessage = "Sucess"
+        };
+
+
+        return loginData;
     }
 
     public async Task<string> ForgotPassword(string email)

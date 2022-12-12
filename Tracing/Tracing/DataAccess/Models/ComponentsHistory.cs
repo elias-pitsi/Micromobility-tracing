@@ -12,10 +12,10 @@ namespace Tracing.DataAccess.Models
     public class ComponentsHistory
     {
         [JsonProperty(PropertyName = "compid")]
-        public Guid CompId { get; set; } = Guid.NewGuid();
+        public string CompId { get; set; } = Guid.NewGuid().ToString();
         public string ComponentName { get; set; } = string.Empty;
         public List<OwnerDto> Owner { get; set; }
-        public Guid OwnerId { get; set; }
+        public string OwnerId { get; set; } = Guid.NewGuid().ToString();
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         public override string ToString()

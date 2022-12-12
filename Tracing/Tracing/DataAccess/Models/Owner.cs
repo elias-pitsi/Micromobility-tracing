@@ -5,7 +5,7 @@ namespace Tracing.DataAccess.Models
     public class Owner
     {
         [JsonProperty(PropertyName = "ownerid")]
-        public Guid OwnerId { get; set; } = Guid.NewGuid();
+        public string OwnerId { get; set; } = Guid.NewGuid().ToString();
         public string Name { get; set; } = string.Empty;
         public string Surname { get; set; } = string.Empty;
         public string email { get; set; } = string.Empty;

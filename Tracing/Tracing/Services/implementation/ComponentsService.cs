@@ -27,7 +27,7 @@ namespace Tracing.Services.implementation
             return components;
         }
 
-        public  async Task<ComponentsHistory> GetComponentHistory(Guid id)
+        public  async Task<ComponentsHistory> GetComponentHistory(string id)
         {
             var component = await _context.ComponentsHistories.Where(x => x.CompId == id).FirstOrDefaultAsync();
 
@@ -38,7 +38,7 @@ namespace Tracing.Services.implementation
 
         public async Task<string> AddComponents(AddComponentsDto components)
         { 
-            var owner = await _context.Owners.Where(u => u.OwnerId == components.ownerId).FirstOrDefaultAsync();
+            var owner = await _context.Owners.Where(u => u.OwnerId.Equals(components.ownerId)).FirstOrDefaultAsync();
             var ownerDto = _mapper.Map<OwnerDto>(owner);
 
             if (owner is not null) 
@@ -61,17 +61,17 @@ namespace Tracing.Services.implementation
             return "Failed! Component not added";
         }
 
-        public async Task<string> UpdateComponents(Guid id, AddComponentsDto components)
+        public async Task<string> UpdateComponents(string id, AddComponentsDto components)
         {
-            var comp = await  _context.Components.Where(u => u.CompId == id).FirstOrDefaultAsync();
-            var compH =  await _context.ComponentsHistories.Where(u => u.CompId == id).FirstOrDefaultAsync();
+            var comp = await  _context.Components.Where(u => u.CompId.Equals(id)).FirstOrDefaultAsync();
+            var compH =  await _context.ComponentsHistories.Where(u => u.CompId.Equals(id)).FirstOrDefaultAsync();
             var listOfOwners = new List<OwnerDto> {};
 
 
             if (comp is not null && compH == null)
             {
                 listOfOwners.Add(comp.owner);
-                comp.OwnerId = components.ownerId;
+                comp.OwnerId = components.ownerId.ToString();
                 comp.CreatedDate = components.CreatedDate;
                 comp.owner = components.owner;
 
@@ -89,7 +89,7 @@ namespace Tracing.Services.implementation
                 await _context.ComponentsHistories.AddAsync(history);
                 await _context.SaveChangesAsync();
 
-                var compH1 = await _context.ComponentsHistories.Where(u => u.CompId == id).FirstOrDefaultAsync();
+                var compH1 = await _context.ComponentsHistories.Where(u => u.CompId.Equals(id)).FirstOrDefaultAsync();
                 if (compH1 != null)
                 {
                     compH1.Owner.Add(components.owner);
@@ -100,13 +100,13 @@ namespace Tracing.Services.implementation
             }
             if (comp is not null && compH != null)
             {
-                comp.OwnerId = components.ownerId;
+                comp.OwnerId = components.ownerId.ToString();
                 comp.CreatedDate = components.CreatedDate;
                 comp.owner = components.owner;
 
                 compH.Owner.Add(components.owner);
                 compH.CreatedDate = components.CreatedDate;
-                compH.OwnerId = components.ownerId;
+                compH.OwnerId = components.ownerId.ToString();
                 await _context.SaveChangesAsync();
 
                 return "Info updated!";
@@ -115,11 +115,6 @@ namespace Tracing.Services.implementation
                 // await _context.ComponentsHistories.AddAsync(ownerDto);
 
                 return "Something when wrong";
-        }
-
-        public async Task<string> DeleteComponent(Guid compId)
-        {
-            throw new NotImplementedException();
         }
     }
 }
